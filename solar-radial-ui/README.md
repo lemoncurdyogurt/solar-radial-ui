@@ -1,73 +1,28 @@
-# React + TypeScript + Vite
+# 🪐 solar-radial-ui
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> 방사형(Radial) 구조를 기반으로 한 인터랙티브 UI 컴포넌트 라이브러리
+>
+> 태양계를 모티브로, 중심(부모) 노드에서 자식 노드들이 궤도를 그리며 배치되고, 클릭 시 계층적으로 탐색할 수 있는 시각적 인터랙션을 제공합니다.
 
-Currently, two official plugins are available:
+### 프로젝트 개요
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+`solar-radial-ui`는 **태양계를 모티브로 한 방사형 인터랙션 컴포넌트**입니다.
 
-## React Compiler
+사용자는 중심 노드(예: 태양)에서부터 자식 노드(예: 행성)를 클릭하며 점점 더 깊은 계층(예: 위성)으로 탐색할 수 있습니다.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+각 노드는 클릭 시 중심으로 이동하며, 이전 부모 노드는 **뒤쪽 계층에 “딤(Dim)” 처리된 상태로 잔존**합니다.
 
-## Expanding the ESLint configuration
+가장 마지막 노드(리프 노드)를 클릭하면, 다시 **최초의 부모 노드(태양)**으로 되돌아옵니다.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 시각적 컨셉
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **배경**: 우주 공간 (깊은 블루톤 + 별빛 파티클 효과)
+- **부모 노드 (중심)**: 태양
+- **자식 노드 (1단계)**: 수성, 금성, 지구, 화성, 목성, 토성, 천왕성, 해왕성
+- **자식 노드 (2단계)**: 각 행성의 위성 (예: 달, 이오, 타이탄 등)
+- **방사형 배치**: 자식 노드들은 중심을 기준으로 원형 궤도에 균등하게 배치
+- **인터랙션**: 클릭 시 중심 이동, 페이드 인/아웃 애니메이션
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### **Reference Design**
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+[Pinterest Concept Link](https://pin.it/3bzfug8K7)
