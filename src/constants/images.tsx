@@ -1,0 +1,33 @@
+export const PLANET_IMAGES: Record<string, string> = {
+  sun: 'planets/sun.jpg',
+  mercury: 'planets/mercury.jpg',
+  venus: 'planets/venus.jpg',
+  earth: 'planets/earth.jpg',
+  mars: 'planets/mars.jpg',
+  jupiter: 'planets/jupiter.jpg',
+  saturn: 'planets/saturn.jpg',
+  uranus: 'planets/uranus.jpg',
+  neptune: 'planets/neptune.jpg',
+};
+
+export const MOON_IMAGES: Record<string, string> = {
+  'earth-moon': 'satellites/earth-moon.jpg',
+  'mars-phobos': 'satellites/mars-phobos.jpg',
+  'mars-deimos': 'satellites/mars-deimos.jpg',
+  'jupiter-io': 'satellites/jupiter-io.jpg',
+  'jupiter-europa': 'satellites/jupiter-europa.jpg',
+  'jupiter-ganymede': 'satellites/jupiter-ganymede.jpg',
+  'jupiter-callisto': 'satellites/jupiter-callisto.jpg',
+  'saturn-titan': 'satellites/saturn-titan.jpg',
+  'saturn-rhea': 'satellites/saturn-rhea.jpg',
+  'saturn-iapetus': 'satellites/saturn-iapetus.jpg',
+  'saturn-dione': 'satellites/saturn-dione.jpg',
+  'saturn-tethys': 'satellites/saturn-tethys.jpg',
+  'uranus-titania': 'satellites/uranus-titania.jpg',
+  'uranus-oberon': 'satellites/uranus-oberon.jpg',
+  'uranus-umbriel': 'satellites/uranus-umbriel.jpg',
+  'uranus-ariel': 'satellites/uranus-ariel.jpg',
+  'uranus-miranda': 'satellites/uranus-miranda.jpg',
+  'neptune-triton': 'satellites/neptune-triton.jpg',
+  'neptune-nereid': 'satellites/neptune-nereid.jpg',
+};
