@@ -1,7 +1,8 @@
-import './App.css';
+import '@/styles/global.css';
+import { SolarSystemRadial } from '@/components/SolarSystemRadial';
 
 function App() {
-  return <></>;
+  return <SolarSystemRadial />;
 }
 
 export default App;
