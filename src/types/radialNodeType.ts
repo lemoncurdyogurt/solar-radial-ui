@@ -1,11 +1,20 @@
+// types/radialNodeType.ts
 export interface RadialNode {
   name: string;
-  image?: string;
-  angleDeg?: number;
-  distanceRatio?: number;
+  x: number;
+  y: number;
+  radius: number;
+  angle: number;
   isMoon?: boolean;
   children?: RadialNode[];
-  x?: number;
-  y?: number;
-  deg?: number;
+  level: number;
+  parent?: RadialNode;
+  isExpanded?: boolean;
+  isSelected?: boolean; // 추가
+}
+
+export interface SolarHierarchy {
+  name: string;
+  children?: SolarHierarchy[];
+  moons?: string[];
 }
