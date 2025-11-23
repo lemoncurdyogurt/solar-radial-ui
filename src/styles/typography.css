@@ -1,0 +1,20 @@
+@layer utilities {
+  .text-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    font-style: normal;
+    line-height: normal;
+  }
+  .text-lab-md {
+    font-size: 1rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: normal;
+  }
+  .text-cap-sm {
+    font-size: 0.75rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: normal;
+  }
+}

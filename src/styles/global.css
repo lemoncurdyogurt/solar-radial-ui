@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import './typography.css';
 
 @theme {
   --color-pink-10: #3d001d;
@@ -22,18 +23,61 @@
   --color-gray-5: #0f0f10;
   --color-gray-10: #171719;
   --color-gray-20: #292a2d;
-  --color-gray-25:#333438;
-  --color-gray-30:#46474c;
-  --color-gray-40:#505158;
-  --color-gray-50:#656870;
-  --color-gray-60:#70737c;
-  --color-gray-70:#878a93;
-  --color-gray-80:#989ba2;
-  --color-gray-90:#aeb0b6;
-  --color-gray-95:#c2c4c8;
-  --color-gray-96:#dbdcdf;
-  --color-gray-97:#e1e2e4;
-  --color-gray-98:#f4f4f5;
-  --color-gray-99:#fafafa;
+  --color-gray-25: #333438;
+  --color-gray-30: #46474c;
+  --color-gray-40: #505158;
+  --color-gray-50: #656870;
+  --color-gray-60: #70737c;
+  --color-gray-70: #878a93;
+  --color-gray-80: #989ba2;
+  --color-gray-90: #aeb0b6;
+  --color-gray-95: #c2c4c8;
+  --color-gray-96: #dbdcdf;
+  --color-gray-97: #e1e2e4;
+  --color-gray-98: #f4f4f5;
+  --color-gray-99: #fafafa;
+}
 
+@layer utilities {
+  .animate-twinkle1 {
+    animation: twinkling 0.5s infinite;
+  }
+  .animate-twinkle2 {
+    animation: twinkling 1.1s infinite;
+  }
+  .animate-twinkle3 {
+    animation: twinkling 1.3s infinite;
+  }
+  .animate-twinkle4 {
+    animation: twinklingWithoutBoxShadow 3s infinite;
+  }
+
+  @keyframes twinkling {
+    0%,
+    100% {
+      box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.1);
+    }
+    50% {
+      box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  @keyframes twinklingWithoutBoxShadow {
+    0% {
+      background-color: #ffffff;
+      box-shadow: 0 0 10px 0px rgba(255, 255, 255, 1);
+    }
+    20% {
+      background-color: #ffc4c4;
+      box-shadow: 0 0 10px 0px rgba(255, 196, 196, 1);
+    }
+    80% {
+      background-color: #c4cfff;
+      box-shadow: 0 0 10px 0px rgba(196, 207, 255, 1);
+    }
+    100% {
+      background-color: #ffffff;
+      box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.2);
+    }
+  }
 }
