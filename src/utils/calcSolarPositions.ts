@@ -1,4 +1,3 @@
-// utils/calcSolarPositions.ts
 import type { RadialNode } from '@/types/radialNodeType';
 
 export const calcSolarPositions = (
@@ -11,14 +10,12 @@ export const calcSolarPositions = (
 
   // 화면 크기에 기반한 거리 계산 (화면 전체 기준)
   const screenSize = Math.min(centerX, centerY);
-  const planetRadius = screenSize * 0.6; // 화면 크기의 60%
-  const moonRadius = screenSize * 0.3; // 화면 크기의 30%
+  const planetRadius = screenSize * 0.6;
+  const moonRadius = screenSize * 0.3;
 
   // 행성이 선택된 경우
   if (selectedPlanet) {
     if (positionedNode.name === selectedPlanet && positionedNode.level === 1) {
-      // 선택된 행성: 중앙에 배치
-
       positionedNode.x = centerX;
       positionedNode.y = centerY;
       positionedNode.isSelected = true;
@@ -28,10 +25,9 @@ export const calcSolarPositions = (
         positionedNode.children = positionedNode.children.map((moon, index) => {
           const moonCount = positionedNode.children!.length;
 
-          // 위성이 한 개인 경우 12시 방향에 배치
           const angle =
             moonCount === 1
-              ? -Math.PI / 2 // 12시 방향
+              ? -Math.PI / 2
               : (2 * Math.PI * index) / moonCount;
 
           const moonX = centerX + moonRadius * Math.cos(angle);

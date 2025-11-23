@@ -1,4 +1,3 @@
-// utils/convertToRadial.ts
 import type { SolarHierarchy, RadialNode } from '@/types/radialNodeType';
 
 export const convertToRadial = (solarData: SolarHierarchy): RadialNode => {

@@ -1,4 +1,3 @@
-// types/radialNodeType.ts
 export interface RadialNode {
   name: string;
   x: number;

@@ -30,10 +30,9 @@ export const SolarNode = ({
     ? MOON_IMAGES[node.name.toLowerCase()]
     : PLANET_IMAGES[node.name.toLowerCase()];
 
-  // 동적으로 오비트 크기 계산
   const screenSize = Math.min(centerX, centerY);
-  const sunOrbitSize = screenSize * 1.2; // 태양 주변 행성 궤도
-  const planetOrbitSize = screenSize * 0.6; // 행성 주변 위성 궤도
+  const sunOrbitSize = screenSize * 1.2;
+  const planetOrbitSize = screenSize * 0.6;
 
   return (
     <>
